@@ -46,48 +46,6 @@
     }
 }
 
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-
-    &__item {
-        display: inline-block;
-        width: 125px;
-        margin: 0 15px;
-
-        &__step {
-            display: inline-block;
-            border: 1px solid #d3deea;
-            background-color: #fff;
-            line-height: 1.2;
-            border-radius: 15px;
-            padding: 14px 18px;
-            color: #365374;
-            font-size: 16px;
-            cursor: default;
-        }
-
-        &__desc {
-            display: block;
-            font-size: 10px;
-            padding-top: 4px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        &--selected {
-            .nav-list__item__step {
-                background-color: #2d3748;
-                border-color: #2d3748;
-                color: #fafafa;
-            }
-        }
-    }
-}
-
 .button {
     transition: background-color ease-in-out .15s;
     background-color: #2462d1;

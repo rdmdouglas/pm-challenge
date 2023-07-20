@@ -3,20 +3,11 @@
         <div class="page__header__logo">
             <a class="page__header__logo__anchor" href="https://www.projectmark.com/" target="_blank"></a>
         </div>
-        <nav class="page__header__nav">
-            <ul class="nav-list">
-                <li class="nav-list__item nav-list__item--selected">
-                    <span class="nav-list__item__step">1</span>
-                    <span class="nav-list__item__desc">Sales Pipeline Settings</span>
-                </li>
-                <li class="nav-list__item">
-                    <span class="nav-list__item__step">2</span>
-                    <span class="nav-list__item__desc">Opportunity Details Settings</span>
-                </li>
-            </ul>
-        </nav>
+        <div class="page__header__nav">
+            <app-navigation [items]="items"></app-navigation>
+        </div>
         <div class="page__header__btn">
-            <button class="button">Next</button>
+            <button class="button" (click)="onNext()">Next</button>
         </div>
     </header>
     <section class="page__body">
