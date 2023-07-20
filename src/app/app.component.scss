@@ -59,4 +59,10 @@
     &:hover {
         background-color: #2357b1;
     }
+
+    &:disabled {
+        transition: none;
+        background-color: #ccc;
+        border-color: #aaa;
+    }
 }

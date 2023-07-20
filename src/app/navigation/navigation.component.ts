@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { INavigation } from './navigation.model';
+import { INavigationStep } from './navigation.model';
 
 @Component({
     selector: 'app-navigation',
@@ -7,5 +7,5 @@ import { INavigation } from './navigation.model';
     styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-    @Input() items!: INavigation[];
+    @Input() steps!: INavigationStep[];
 }

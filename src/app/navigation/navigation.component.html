@@ -1,9 +1,9 @@
 <nav class="nav">
     <ul class="nav__list">
-        <ng-container *ngFor="let item of items">
-            <li class="nav__list__item" [ngClass]="{ 'nav__list__item--selected': item.selected }">
-                <span class="nav__list__item__step">{{ item.name }}</span>
-                <span class="nav__list__item__desc">{{ item.description }}</span>
+        <ng-container *ngFor="let step of steps">
+            <li class="nav__list__item" [ngClass]="{ 'nav__list__item--selected': step.selected }">
+                <span class="nav__list__item__step">{{ step.name }}</span>
+                <span class="nav__list__item__desc">{{ step.description }}</span>
             </li>
         </ng-container>
     </ul>

@@ -4,13 +4,14 @@
             <a class="page__header__logo__anchor" href="https://www.projectmark.com/" target="_blank"></a>
         </div>
         <div class="page__header__nav">
-            <app-navigation [items]="items"></app-navigation>
+            <app-navigation [steps]="steps"></app-navigation>
         </div>
         <div class="page__header__btn">
-            <button class="button" (click)="onNext()">Next</button>
+            <button class="button" (click)="onNext()" [disabled]="done">Next</button>
         </div>
     </header>
     <section class="page__body">
-        <router-outlet></router-outlet>
+        <div *ngIf="currentStep.name === NavigationStepName.STEP_1">Sales Pipeline Settings</div>
+        <div *ngIf="currentStep.name === NavigationStepName.STEP_2">Opportunity Details Settings</div>
     </section>
 </div>
