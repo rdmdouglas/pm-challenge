@@ -40,6 +40,6 @@ export class AppComponent implements OnInit {
     private getNextNavigation(): number {
         const currIndex = this.steps.findIndex(x => x.name === this.currentStep.name);
         const nextIndex = currIndex + 1;
-        return (this.steps.length - 1) <= nextIndex ? nextIndex : currIndex;
+        return (this.steps.length - 1) >= nextIndex ? nextIndex : currIndex;
     }
 }
