@@ -1,0 +1,65 @@
+@import '../../styles/variables';
+
+$step-font-family: 'Noto Sans JP';
+$step-description-font-size: 10px;
+$step-border-color: #d3deea;
+$step-bg-color: #fff;
+$step-font-color: #365374;
+$step-selected-border-color: #2d3748;
+$step-selected-bg-color: #2d3748;
+$step-selected-font-color: #fafafa;
+
+.nav {
+  width: 100%;
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+
+    &__item {
+      display: inline-block;
+      width: rem-calc(125px);
+      margin: 0 rem-calc(15px);
+
+      &__step {
+        display: inline-flex;
+        border: 1px solid $step-border-color;
+        background-color: $step-bg-color;
+        border-radius: rem-calc(16px);
+        color: $step-font-color;
+        font-family: $step-font-family;
+        cursor: default;
+        box-sizing: border-box;
+        width: rem-calc(50px);
+        height: rem-calc(50px);
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__desc {
+        display: block;
+        font-size: rem-calc($step-description-font-size);
+        padding-top: rem-calc(4px);
+      }
+
+      &--selected {
+        .nav__list__item__step {
+          background-color: $step-selected-border-color;
+          border-color: $step-selected-border-color;
+          color: $step-selected-font-color;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    padding-right: rem-calc(40px);
+    display: flex;
+    align-items: center;
+    min-width: rem-calc(125px);
+    box-sizing: border-box;
+    flex-flow: row-reverse;
+  }
+}

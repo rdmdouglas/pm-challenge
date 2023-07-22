@@ -1,0 +1,192 @@
+@import '../../../styles/variables';
+
+$default-card-bg-color: #f2f7fa;
+$default-card-font-color: #4a5568;
+$default-card-icon-bg-color: #e2e8f0;
+$default-card-icon-content-bg-color: #cbd5e0;
+$default-card-content-border-color: $default-card-icon-bg-color;
+
+$purple-card-bg-color: #f7f1ff;
+$purple-card-font-color: #56527a;
+$purple-card-icon-bg-color: #e9d9ff;
+$purple-card-icon-content-bg-color: #dabfff;
+$purple-card-content-border-color: $purple-card-icon-bg-color;
+
+$yellow-card-bg-color: #fef6ef;
+$yellow-card-font-color: #684422;
+$yellow-card-icon-bg-color: #ffe4cc;
+$yellow-card-icon-content-bg-color: #ffd6b3;
+$yellow-card-content-border-color: $yellow-card-icon-bg-color;
+
+$blue-card-bg-color: #e6f4ff;
+$blue-card-font-color: #003a66;
+$blue-card-icon-bg-color: #bfe3ff;
+$blue-card-icon-content-bg-color: #99d1ff;
+$blue-card-content-border-color: $blue-card-icon-bg-color;
+
+$green-card-bg-color: #def5f7;
+$green-card-font-color: #684422;
+$green-card-icon-bg-color: #aaecf2;
+$green-card-icon-content-bg-color: #81dde5;
+$green-card-content-border-color: $green-card-icon-bg-color;
+
+$red-card-bg-color: #fff2f6;
+$red-card-font-color: #773a47;
+$red-card-icon-bg-color: #ffd9e4;
+$red-card-icon-content-bg-color: #ffbfd2;
+$red-card-content-border-color: $red-card-icon-bg-color;
+
+.cards {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: rem-calc(70px);
+  padding-bottom: rem-calc(5px);
+
+  &__card {
+    max-width: rem-calc(222px);
+    width: 0;
+    flex: 1 1 auto;
+    background: linear-gradient($default-card-bg-color 50%, $default-card-bg-color, #fff 80%);
+    border-radius: rem-calc(15px);
+    margin: 0 rem-calc(7px);
+    color: $default-card-font-color;
+    display: flex;
+    flex-flow: column;
+
+    &__header {
+      font-weight: bold;
+      padding: rem-calc(13px);
+      text-align: left;
+    }
+
+    &__icon {
+      height: rem-calc(22px);
+      margin: 0 rem-calc(12px);
+      border-radius: rem-calc(10px);
+      width: 52%;
+      position: relative;
+      background-color: $default-card-icon-bg-color;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+        border-radius: rem-calc(10px);
+        width: 37%;
+        background-color: $default-card-icon-content-bg-color;
+      }
+    }
+
+    &__content {
+      box-sizing: border-box;
+      max-height: rem-calc(175px);
+      border: 1px solid $default-card-content-border-color;
+      margin: rem-calc(10px) rem-calc(5px);
+      border-radius: rem-calc(10px);
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.cards__card--purple {
+  background: linear-gradient($purple-card-bg-color 50%, $purple-card-bg-color, #fff 80%);
+
+  .cards__card__header {
+    color: $purple-card-font-color;
+  }
+
+  .cards__card__icon {
+    background-color: $purple-card-icon-bg-color;
+
+    &::before {
+      background-color: $purple-card-icon-content-bg-color;
+    }
+  }
+
+  .cards__card__content {
+    border-color: $purple-card-content-border-color;
+  }
+}
+
+.cards__card--yellow {
+  background: linear-gradient($yellow-card-bg-color 50%, $yellow-card-bg-color, #fff 80%);
+
+  .cards__card__header {
+    color: $yellow-card-font-color;
+  }
+
+  .cards__card__icon {
+    background-color: $yellow-card-icon-bg-color;
+
+    &::before {
+      background-color: $yellow-card-icon-content-bg-color;
+    }
+  }
+
+  .cards__card__content {
+    border-color: $yellow-card-content-border-color;
+  }
+}
+
+.cards__card--blue {
+  background: linear-gradient($blue-card-bg-color 50%, $blue-card-bg-color, #fff 80%);
+
+  .cards__card__header {
+    color: $blue-card-font-color;
+  }
+
+  .cards__card__icon {
+    background-color: $blue-card-icon-bg-color;
+
+    &::before {
+      background-color: $blue-card-icon-content-bg-color;
+    }
+  }
+
+  .cards__card__content {
+    border-color: $blue-card-content-border-color;
+  }
+}
+
+.cards__card--green {
+  background: linear-gradient($green-card-bg-color 50%, $green-card-bg-color, #fff 80%);
+
+  .cards__card__header {
+    color: $green-card-font-color;
+  }
+
+  .cards__card__icon {
+    background-color: $green-card-icon-bg-color;
+
+    &::before {
+      background-color: $green-card-icon-content-bg-color;
+    }
+  }
+
+  .cards__card__content {
+    border-color: $green-card-content-border-color;
+  }
+}
+
+.cards__card--red {
+  background: linear-gradient($red-card-bg-color 50%, $red-card-bg-color, #fff 80%);
+
+  .cards__card__header {
+    color: $red-card-font-color;
+  }
+
+  .cards__card__icon {
+    background-color: $red-card-icon-bg-color;
+
+    &::before {
+      background-color: $red-card-icon-content-bg-color;
+    }
+  }
+
+  .cards__card__content {
+    border-color: $red-card-content-border-color;
+  }
+}

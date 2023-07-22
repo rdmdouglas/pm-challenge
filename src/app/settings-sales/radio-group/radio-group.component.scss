@@ -1,0 +1,84 @@
+@import '../../../styles/variables';
+
+$radio-border-color: #ddd;
+$radio-input-border-color: #cbd5e0;
+$radio-bg-color: #e2e8f0;
+$radio-checked-color: #2462d1;
+$radio-checked-bg-url: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='3 2 15 15'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+$radio-label-font-size: 14px;
+
+.radio-group {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+
+  &__radio {
+    box-sizing: border-box;
+    display: flex;
+    width: rem-calc(210px);
+    padding-left: rem-calc(14px);
+    border: 2px solid $radio-border-color;
+    border-radius: rem-calc(10px);
+    margin: rem-calc(5px);
+    position: relative;
+    height: rem-calc(50px);
+    align-items: center;
+    justify-content: flex-start;
+
+    &--checked {
+      border: 2px solid $radio-checked-color;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: rem-calc(-7px);
+        display: inline-block;
+        width: rem-calc(10px);
+        height: rem-calc(10px);
+        border-left: 2px solid $radio-checked-color;
+        border-bottom: 2px solid $radio-checked-color;
+        transform: rotate(-45deg);
+        left: calc(50% - 5px);
+        background-color: #fff;
+      }
+    }
+
+    &:hover:not(.radio-group__radio--checked) {
+      background-color: #edf2f7;
+    }
+
+  }
+
+  &__input {
+    appearance: none;
+    border: 2px solid $radio-input-border-color;
+    width: rem-calc(17px);
+    height: rem-calc(17px);
+    content: none;
+    margin: 0;
+    border-radius: rem-calc(5px);
+
+    &:checked {
+      background-image: $radio-checked-bg-url;
+      background-color: $radio-checked-color;
+      border-color: $radio-checked-color;
+      transition: background-color $default-transition-settings, background-image $default-transition-settings, border-color $default-transition-settings;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &:not(:checked) {
+        background-color: $radio-bg-color;
+        transition: background-color $default-transition-settings;
+      }
+    }
+  }
+
+  &__label {
+    padding-left: rem-calc(10px);
+    line-height: 1;
+    font-size: rem-calc($radio-label-font-size);
+  }
+}

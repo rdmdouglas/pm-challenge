@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+@import './variables';
+
+$settings-page-title-font-size: 26px;
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  font-family: $default-font-family;
+  font-size: $default-font-size;
+  color: $default-font-color;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.settings-page {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+
+  &__title {
+    padding: rem-calc(40px) 0;
+    margin: 0;
+    font-size: rem-calc($settings-page-title-font-size);
+  }
+}

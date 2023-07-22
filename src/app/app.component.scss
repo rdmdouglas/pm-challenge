@@ -1,0 +1,78 @@
+@import '../styles/variables';
+
+$page-bg-color: #edf2f7;
+$page-body-bg-color: #fff;
+$btn-font-color: #fff;
+$btn-bg-color: #2462d1;
+$btn-bg-color-hover: #2357b1;
+$btn-disabled-bg-color: #aaa;
+$btn-disabled-border-color: #ccc;
+
+.page {
+  background-color: $page-bg-color;
+  display: flex;
+  flex-flow: column;
+
+  &__header {
+    display: flex;
+    flex-flow: row;
+    flex: 0 1 auto;
+    padding-top: rem-calc(20px);
+
+    &__logo {
+      padding-left: rem-calc(30px);
+      display: flex;
+      align-items: center;
+      min-width: rem-calc(125px);
+      box-sizing: border-box;
+
+      &__anchor {
+        background-image: $logo-url;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: rem-calc(38px);
+        height: rem-calc(38px);
+      }
+    }
+
+    &__nav {
+      width: 100%;
+    }
+
+    &__btn {
+      padding-right: rem-calc(40px);
+      display: flex;
+      align-items: center;
+      min-width: rem-calc(125px);
+      box-sizing: border-box;
+      flex-flow: row-reverse;
+    }
+  }
+
+  &__body {
+    background-color: $page-body-bg-color;
+    margin: rem-calc(20px) rem-calc(10px) rem-calc(10px) rem-calc(10px);
+    border-radius: rem-calc(20px);
+    flex: 1 1 auto;
+  }
+}
+
+.button {
+  transition: background-color $default-transition-settings;
+  background-color: $btn-bg-color;
+  color: $btn-font-color;
+  border: none;
+  padding: rem-calc(12px) rem-calc(20px);
+  border-radius: rem-calc(20px);
+  line-height: 1.2;
+
+  &:hover {
+    background-color: $btn-bg-color-hover;
+  }
+
+  &:disabled {
+    transition: none;
+    background-color: $btn-disabled-bg-color;
+    border-color: $btn-disabled-border-color;
+  }
+}

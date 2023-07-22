@@ -1,0 +1,6 @@
+<div class="radio-group">
+  <div *ngFor="let item of items" class="radio-group__radio" [ngClass]="{ 'radio-group__radio--checked': item.checked }">
+    <input class="radio-group__input" type="radio" name="sales-type" [id]="'rg-' + item.value" [value]="item.value" [checked]="item.checked" (change)="onChange(item)">
+    <label class="radio-group__label" [for]="'rg-' + item.value">{{ item.label }}</label>
+  </div>
+</div>
