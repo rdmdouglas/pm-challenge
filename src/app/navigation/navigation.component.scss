@@ -4,10 +4,10 @@ $step-font-family: 'Noto Sans JP';
 $step-description-font-size: 10px;
 $step-border-color: #d3deea;
 $step-bg-color: #fff;
-$step-color: #365374;
+$step-font-color: #365374;
 $step-selected-border-color: #2d3748;
 $step-selected-bg-color: #2d3748;
-$step-selected-color: #fafafa;
+$step-selected-font-color: #fafafa;
 
 .nav {
   width: 100%;
@@ -28,7 +28,7 @@ $step-selected-color: #fafafa;
         border: 1px solid $step-border-color;
         background-color: $step-bg-color;
         border-radius: rem-calc(16px);
-        color: $step-color;
+        color: $step-font-color;
         font-family: $step-font-family;
         cursor: default;
         box-sizing: border-box;
@@ -48,7 +48,7 @@ $step-selected-color: #fafafa;
         .nav__list__item__step {
           background-color: $step-selected-border-color;
           border-color: $step-selected-border-color;
-          color: $step-selected-color;
+          color: $step-selected-font-color;
         }
       }
     }

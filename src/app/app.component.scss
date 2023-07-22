@@ -1,12 +1,15 @@
 @import '../styles/variables';
 
+$page-bg-color: #edf2f7;
+$page-body-bg-color: #fff;
+$btn-font-color: #fff;
 $btn-bg-color: #2462d1;
 $btn-bg-color-hover: #2357b1;
 $btn-disabled-bg-color: #aaa;
 $btn-disabled-border-color: #ccc;
 
 .page {
-  background-color: #edf2f7;
+  background-color: $page-bg-color;
   display: flex;
   flex-flow: column;
 
@@ -47,7 +50,7 @@ $btn-disabled-border-color: #ccc;
   }
 
   &__body {
-    background-color: #fff;
+    background-color: $page-body-bg-color;
     margin: rem-calc(20px) rem-calc(10px) rem-calc(10px) rem-calc(10px);
     border-radius: rem-calc(20px);
     flex: 1 1 auto;
@@ -57,8 +60,7 @@ $btn-disabled-border-color: #ccc;
 .button {
   transition: background-color $default-transition-settings;
   background-color: $btn-bg-color;
-  color: #fff;
-  font-weight: bold;
+  color: $btn-font-color;
   border: none;
   padding: rem-calc(12px) rem-calc(20px);
   border-radius: rem-calc(20px);
