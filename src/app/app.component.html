@@ -11,7 +11,7 @@
         </div>
     </header>
     <section class="page__body">
-        <div *ngIf="currentStep.name === NavigationStepName.STEP_1">Sales Pipeline Settings</div>
-        <div *ngIf="currentStep.name === NavigationStepName.STEP_2">Opportunity Details Settings</div>
+        <app-settings-sales *ngIf="currentStep.name === NavigationStepName.STEP_1"></app-settings-sales>
+        <app-settings-opportunity *ngIf="currentStep.name === NavigationStepName.STEP_2"></app-settings-opportunity>
     </section>
 </div>

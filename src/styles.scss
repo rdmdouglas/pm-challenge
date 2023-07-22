@@ -9,3 +9,15 @@ body {
     font-size: 14px;
     color: #333;
 }
+
+.settings-page {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    text-align: center;
+
+    &__title {
+        margin: 40px 0;
+        font-size: 26px;
+    }
+}
