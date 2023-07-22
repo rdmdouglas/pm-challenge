@@ -2,8 +2,8 @@
   <ul class="nav__list">
     <ng-container *ngFor="let step of steps">
       <li class="nav__list__item" [ngClass]="{ 'nav__list__item--selected': step.selected }">
-        <span class="nav__list__item__step">{{ step.name }}</span>
-        <span class="nav__list__item__desc">{{ step.description }}</span>
+        <span class="nav__list__item__step">{{ step.number }}</span>
+        <span class="nav__list__item__desc overflow-ellipsis">{{ step.description }}</span>
       </li>
     </ng-container>
   </ul>

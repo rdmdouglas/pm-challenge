@@ -1,150 +1,189 @@
+@import '../../../styles/variables';
+
+$default-card-bg-color: #f2f7fa;
+$default-card-color: #4a5568;
+$default-card-icon-bg-color: #e2e8f0;
+$default-card-icon-content-bg-color: #cbd5e0;
+$default-card-content-border-color: $default-card-icon-bg-color;
+
+$purple-card-bg-color: #f7f1ff;
+$purple-card-color: #56527a;
+$purple-card-icon-bg-color: #e9d9ff;
+$purple-card-icon-content-bg-color: #dabfff;
+$purple-card-content-border-color: $purple-card-icon-bg-color;
+
+$yellow-card-bg-color: #fef6ef;
+$yellow-card-color: #684422;
+$yellow-card-icon-bg-color: #ffe4cc;
+$yellow-card-icon-content-bg-color: #ffd6b3;
+$yellow-card-content-border-color: $yellow-card-icon-bg-color;
+
+$blue-card-bg-color: #e6f4ff;
+$blue-card-color: #003a66;
+$blue-card-icon-bg-color: #bfe3ff;
+$blue-card-icon-content-bg-color: #99d1ff;
+$blue-card-content-border-color: $blue-card-icon-bg-color;
+
+$green-card-bg-color: #def5f7;
+$green-card-color: #684422;
+$green-card-icon-bg-color: #aaecf2;
+$green-card-icon-content-bg-color: #81dde5;
+$green-card-content-border-color: $green-card-icon-bg-color;
+
+$red-card-bg-color: #fff2f6;
+$red-card-color: #773a47;
+$red-card-icon-bg-color: #ffd9e4;
+$red-card-icon-content-bg-color: #ffbfd2;
+$red-card-content-border-color: $red-card-icon-bg-color;
+
 .cards {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   height: 100%;
-  padding-top: 70px;
-  padding-bottom: 5px;
+  padding-top: rem-calc(70px);
+  padding-bottom: rem-calc(5px);
 
   &__card {
-    width: 222px;
-    background: linear-gradient(#f2f7fa 50%, #f2f7fa, #fff 80%);
-    border-radius: 15px;
-    margin: 0 7px;
-    color: #4a5568;
+    max-width: rem-calc(222px);
+    width: 0;
+    flex: 1 1 auto;
+    background: linear-gradient($default-card-bg-color 50%, $default-card-bg-color, #fff 80%);
+    border-radius: rem-calc(15px);
+    margin: 0 rem-calc(7px);
+    color: $default-card-color;
 
     &__header {
       font-weight: bold;
-      padding: 13px;
+      padding: rem-calc(13px);
       text-align: left;
     }
 
     &__icon {
-      height: 22px;
-      margin: 0 12px;
-      border-radius: 10px;
+      height: rem-calc(22px);
+      margin: 0 rem-calc(12px);
+      border-radius: rem-calc(10px);
       width: 52%;
       position: relative;
-      background-color: #e2e8f0;
+      background-color: $default-card-icon-bg-color;
 
       &::before {
         content: '';
         position: absolute;
         left: 0;
         height: 100%;
-        border-radius: 10px;
+        border-radius: rem-calc(10px);
         width: 37%;
-        background-color: #cbd5e0;
+        background-color: $default-card-icon-content-bg-color;
       }
     }
 
     &__content {
       box-sizing: border-box;
-      height: 175px;
-      border: 1px solid #e2e8f0;
-      margin: 10px 5px;
-      border-radius: 10px;
+      height: rem-calc(175px);
+      border: 1px solid $default-card-content-border-color;
+      margin: rem-calc(10px) rem-calc(5px);
+      border-radius: rem-calc(10px);
     }
   }
 }
 
-
 .cards__card--purple {
-  background: linear-gradient(#f7f1ff 50%, #f7f1ff, #fff 80%);
+  background: linear-gradient($purple-card-bg-color 50%, $purple-card-bg-color, #fff 80%);
 
   .cards__card__header {
-    color: #56527a;
+    color: $purple-card-color;
   }
 
   .cards__card__icon {
-    background-color: #e9d9ff;
+    background-color: $purple-card-icon-bg-color;
 
     &::before {
-      background-color: #dabfff;
+      background-color: $purple-card-icon-content-bg-color;
     }
   }
 
   .cards__card__content {
-    border-color: #e9d9ff;
+    border-color: $purple-card-content-border-color;
   }
 }
 
 .cards__card--yellow {
-  background: linear-gradient(#fef6ef 50%, #fef6ef, #fff 80%);
+  background: linear-gradient($yellow-card-bg-color 50%, $yellow-card-bg-color, #fff 80%);
 
   .cards__card__header {
-    color: #684422;
+    color: $yellow-card-color;
   }
 
   .cards__card__icon {
-    background-color: #ffe4cc;
+    background-color: $yellow-card-icon-bg-color;
 
     &::before {
-      background-color: #ffd6b3;
+      background-color: $yellow-card-icon-content-bg-color;
     }
   }
 
   .cards__card__content {
-    border-color: #ffe4cc;
+    border-color: $yellow-card-content-border-color;
   }
 }
 
 .cards__card--blue {
-  background: linear-gradient(#e6f4ff 50%, #e6f4ff, #fff 80%);
+  background: linear-gradient($blue-card-bg-color 50%, $blue-card-bg-color, #fff 80%);
 
   .cards__card__header {
-    color: #003a66;
+    color: $blue-card-color;
   }
 
   .cards__card__icon {
-    background-color: #bfe3ff;
+    background-color: $blue-card-icon-bg-color;
 
     &::before {
-      background-color: #99d1ff;
+      background-color: $blue-card-icon-content-bg-color;
     }
   }
 
   .cards__card__content {
-    border-color: #bfe3ff;
+    border-color: $blue-card-content-border-color;
   }
 }
 
 .cards__card--green {
-  background: linear-gradient(#def5f7 50%, #def5f7, #fff 80%);
+  background: linear-gradient($green-card-bg-color 50%, $green-card-bg-color, #fff 80%);
 
   .cards__card__header {
-    color: #684422;
+    color: $green-card-color;
   }
 
   .cards__card__icon {
-    background-color: #aaecf2;
+    background-color: $green-card-icon-bg-color;
 
     &::before {
-      background-color: #81dde5;
+      background-color: $green-card-icon-content-bg-color;
     }
   }
 
   .cards__card__content {
-    border-color: #aaecf2;
+    border-color: $green-card-content-border-color;
   }
 }
 
 .cards__card--red {
-  background: linear-gradient(#fff2f6 50%, #fff2f6, #fff 80%);
+  background: linear-gradient($red-card-bg-color 50%, $red-card-bg-color, #fff 80%);
 
   .cards__card__header {
-    color: #773a47;
+    color: $red-card-color;
   }
 
   .cards__card__icon {
-    background-color: #ffd9e4;
+    background-color: $red-card-icon-bg-color;
 
     &::before {
-      background-color: #ffbfd2;
+      background-color: $red-card-icon-content-bg-color;
     }
   }
 
   .cards__card__content {
-    border-color: #ffd9e4;
+    border-color: $red-card-content-border-color;
   }
 }

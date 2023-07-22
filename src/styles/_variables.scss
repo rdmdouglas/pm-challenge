@@ -1,0 +1,12 @@
+$default-font-family: "Roboto";
+$default-font-size: 16px;
+$default-font-color: #2d3748;
+$default-transition-settings: ease-in-out .15s;
+$logo-url: url('../assets/logo.svg');
+
+@use 'sass:math';
+
+@function rem-calc($size) {
+  $remsize: math.div($size, $default-font-size);
+  @return #{$remsize}rem;
+}

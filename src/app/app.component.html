@@ -11,7 +11,9 @@
     </div>
   </header>
   <section class="page__body">
-    <app-settings-sales *ngIf="currentStep.name === NavigationStepName.STEP_1"></app-settings-sales>
-    <app-settings-opportunity *ngIf="currentStep.name === NavigationStepName.STEP_2"></app-settings-opportunity>
+    <app-settings-sales *ngIf="currentStep.number === NavigationStepNumber.STEP_1"></app-settings-sales>
+    <app-settings-opportunity *ngIf="currentStep.number === NavigationStepNumber.STEP_2">
+      <a href="#" (click)="onPrevious()">Voltar</a>
+    </app-settings-opportunity>
   </section>
 </div>

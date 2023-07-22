@@ -1,5 +1,5 @@
 export interface INavigationStep {
-  name: string;
+  number: number;
   description: string;
   selected?: boolean;
 }
