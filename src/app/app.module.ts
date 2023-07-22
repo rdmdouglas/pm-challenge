@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { SettingsSalesComponent } from './settings-sales/settings-sales.component';
 import { SettingsOpportunityComponent } from './settings-opportunity/settings-opportunity.component';
+import { CardsComponent } from './settings-sales/cards/cards.component';
+import { RadioGroupComponent } from './settings-sales/radio-group/radio-group.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
     SettingsSalesComponent,
-    SettingsOpportunityComponent
+    SettingsOpportunityComponent,
+    CardsComponent,
+    RadioGroupComponent
   ],
   imports: [
     BrowserModule,

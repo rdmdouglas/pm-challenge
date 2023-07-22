@@ -2,10 +2,10 @@ import { Component, Input } from '@angular/core';
 import { INavigationStep } from './navigation.model';
 
 @Component({
-    selector: 'app-navigation',
-    templateUrl: './navigation.component.html',
-    styleUrls: ['./navigation.component.scss']
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-    @Input() steps!: INavigationStep[];
+  @Input() steps!: INavigationStep[];
 }

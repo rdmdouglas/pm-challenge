@@ -1,56 +1,7 @@
-<div class="settings-page">
-    <h1 class="settings-page__title">Please select the type of sales pipeline that best fits to your company</h1>
-    <div class="radio-group">
-        <div class="radio-group__radio" [ngClass]="{ 'radio-group__radio--checked': type === 'basic' }">
-            <input class="radio-group__input" type="radio" value="basic" name="sales-type" id="basic" (change)="type = 'basic'" checked>
-            <label class="radio-group__label" for="basic">Basic</label>
-        </div>
-
-        <div class="radio-group__radio" [ngClass]="{ 'radio-group__radio--checked': type === 'advanced' }">
-            <input class="radio-group__input" type="radio" value="advanced" name="sales-type" id="advanced" (change)="type = 'advanced'">
-            <label class="radio-group__label" for="advanced">Advanced</label>
-        </div>
-
-        <div class="radio-group__radio" [ngClass]="{ 'radio-group__radio--checked': type === 'expert' }">
-            <input class="radio-group__input" type="radio" value="expert" name="sales-type" id="expert" (change)="type = 'expert'">
-            <label class="radio-group__label" for="expert">Expert</label>
-        </div>
-
-        <div class="radio-group__radio" [ngClass]="{ 'radio-group__radio--checked': type === 'custom' }">
-            <input class="radio-group__input" type="radio" value="custom" name="sales-type" id="custom" (change)="type = 'custom'">
-            <label class="radio-group__label" for="custom">Custom</label>
-        </div>
-    </div>
-    <div class="cards">
-        <div class="cards__card cards__card--purple">
-            <div class="cards__card__header">{{ 'lead' | uppercase }}</div>
-            <div class="cards__card__icon"></div>
-            <div class="cards__card__content"></div>
-        </div>
-        <div class="cards__card cards__card--yellow">
-            <div class="cards__card__header">{{ 'rfp in progress' | uppercase }}</div>
-            <div class="cards__card__icon"></div>
-            <div class="cards__card__content"></div>
-        </div>
-        <div class="cards__card cards__card--blue">
-            <div class="cards__card__header">{{ 'submitted' | uppercase }}</div>
-            <div class="cards__card__icon"></div>
-            <div class="cards__card__content"></div>
-        </div>
-        <div class="cards__card cards__card--green">
-            <div class="cards__card__header">{{ 'won' | uppercase }}</div>
-            <div class="cards__card__icon"></div>
-            <div class="cards__card__content"></div>
-        </div>
-        <div class="cards__card cards__card--red">
-            <div class="cards__card__header">{{ 'lost' | uppercase }}</div>
-            <div class="cards__card__icon"></div>
-            <div class="cards__card__content"></div>
-        </div>
-        <div class="cards__card">
-            <div class="cards__card__header">{{ 'closed' | uppercase }}</div>
-            <div class="cards__card__icon"></div>
-            <div class="cards__card__content"></div>
-        </div>
-    </div>
+<div class="settings-page full-height">
+  <h1 class="settings-page__title">Please select the type of sales pipeline that best fits to your company</h1>
+  <app-radio-group [items]="radioItems"></app-radio-group>
+  <div class="full-height">
+    <app-cards [items]="getCardsItems()"></app-cards>
+  </div>
 </div>

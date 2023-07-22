@@ -1,0 +1,9 @@
+<div class="cards">
+  <ng-container *ngFor="let item of items">
+    <div [class]="'cards__card cards__card--' + item.style">
+      <div class="cards__card__header">{{ item.title | uppercase }}</div>
+      <div class="cards__card__icon"></div>
+      <div class="cards__card__content"></div>
+    </div>
+  </ng-container>
+</div>
