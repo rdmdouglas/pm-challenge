@@ -5,7 +5,6 @@ import { IRadioGroupItem } from './radio-group/radio-group.model';
 @Component({
   selector: 'app-settings-sales',
   templateUrl: './settings-sales.component.html',
-  styleUrls: ['./settings-sales.component.scss']
 })
 export class SettingsSalesComponent implements OnInit {
   radioItems!: IRadioGroupItem[];
