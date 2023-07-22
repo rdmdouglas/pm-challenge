@@ -8,12 +8,14 @@
         box-sizing: border-box;
         display: flex;
         width: 210px;
-        text-align: left;
-        padding: 14px;
+        padding-left: 14px;
         border: 2px solid #ddd;
         border-radius: 10px;
         margin: 5px;
         position: relative;
+        height: 50px;
+        align-items: center;
+        justify-content: start;
 
         &--checked {
             border: 2px solid #2462d1;
@@ -79,7 +81,7 @@
     padding-bottom: 5px;
 
     &__card {
-        width: 220px;
+        width: 222px;
         background: linear-gradient(#f2f7fa 50%, #f2f7fa, #fff 80%);
         border-radius: 15px;
         margin: 0 7px;
@@ -87,7 +89,7 @@
 
         &__header {
             font-weight: bold;
-            padding: 12px;
+            padding: 13px;
             text-align: left;
         }
 
@@ -95,7 +97,7 @@
             height: 22px;
             margin: 0 12px;
             border-radius: 10px;
-            width: 50%;
+            width: 52%;
             position: relative;
             background-color: #e2e8f0;
 
@@ -105,13 +107,14 @@
                 left: 0;
                 height: 100%;
                 border-radius: 10px;
-                width: 40%;
+                width: 37%;
                 background-color: #cbd5e0;
             }
         }
 
         &__content {
-            height: 170px;
+            box-sizing: border-box;
+            height: 175px;
             border: 1px solid #e2e8f0;
             margin: 10px 5px;
             border-radius: 10px;
